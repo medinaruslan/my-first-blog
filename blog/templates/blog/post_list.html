@@ -12,6 +12,14 @@
             <h2><a href="">My first day at KBTU</a></h2>
             <p>In the life of each student there was such an exciting moment as the first day at the university! This is a truly important moment in everyone's life. I thought that on the first day at the university everything would change dramatically and I would become a business lady, I know it all sounds funny, because nothing really happened, although I have to admit that on the first day at the university I found many new friends and still communicate very well with them. And my first day began not on September 1, but at the end of August, which I was very surprised about. On the same day in the evening at the university venues there was a KBTU OPEN concert, where everyone sang and danced. In general, it was very fun. </p>
         </div>
+	
+	{% for post in posts %}
+ 	   <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+  	  </div>
+	{% endfor %}
 
         <div>
             <p>published: 19.11.2020, 15:55</p>
